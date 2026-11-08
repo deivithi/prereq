@@ -15,7 +15,8 @@ const T = {
     tabTrail: "Home", tabMap: "Map", tabFeed: "Browse", tabAbout: "Method", langLabel: "Language", searchBtn: "Search",
     watchNow: "Watch now", openMap: "Open the map", ofTrail: "of the trail", seeAll: "See all",
     railPrev: "Previous videos", railNext: "More videos", skip: "Skip to content",
-    foot: 'Data: <a href="https://hackertube.org" target="_blank" rel="noopener">HackerTube</a> (ODC-By) from the <a href="https://huggingface.co/datasets/open-index/hacker-news" target="_blank" rel="noopener">open-index/hacker-news</a> archive, plus public course syllabi. Not affiliated with YouTube, HN or any course.',
+    foot: 'Open source (MIT): <a href="https://github.com/deivithi/prereq" target="_blank" rel="noopener">code, data and eval on GitHub</a>. Data: <a href="https://hackertube.org" target="_blank" rel="noopener">HackerTube</a> (ODC-By) from the <a href="https://huggingface.co/datasets/open-index/hacker-news" target="_blank" rel="noopener">open-index/hacker-news</a> archive, plus public course syllabi. Not affiliated with YouTube, HN or any course.',
+    codeLabel: "Code", codeAria: "Open source code on GitHub",
     railPath: "Continue the trail", railTop: "Most recommended by experts", railDone: "Watched",
     mapLede: "18 topics wired by prerequisite. Point at one to light up what it needs and what it unlocks; your progress fills the map.",
     heroTitle: 'Learn AI in the order it <em>actually</em> makes sense.',
@@ -45,7 +46,8 @@ const T = {
     tabTrail: "Início", tabMap: "Mapa", tabFeed: "Explorar", tabAbout: "Método", langLabel: "Idioma", searchBtn: "Buscar",
     watchNow: "Assistir agora", openMap: "Abrir o mapa", ofTrail: "da trilha", seeAll: "Ver todos",
     railPrev: "Vídeos anteriores", railNext: "Mais vídeos", skip: "Pular para o conteúdo",
-    foot: 'Dados: <a href="https://hackertube.org" target="_blank" rel="noopener">HackerTube</a> (ODC-By), do arquivo <a href="https://huggingface.co/datasets/open-index/hacker-news" target="_blank" rel="noopener">open-index/hacker-news</a>, mais syllabi públicos de cursos. Sem vínculo com YouTube, HN ou qualquer curso.',
+    foot: 'Código aberto (MIT): <a href="https://github.com/deivithi/prereq" target="_blank" rel="noopener">código, dados e eval no GitHub</a>. Dados: <a href="https://hackertube.org" target="_blank" rel="noopener">HackerTube</a> (ODC-By), do arquivo <a href="https://huggingface.co/datasets/open-index/hacker-news" target="_blank" rel="noopener">open-index/hacker-news</a>, mais syllabi públicos de cursos. Sem vínculo com YouTube, HN ou qualquer curso.',
+    codeLabel: "Código", codeAria: "Código aberto no GitHub",
     railPath: "Continue a trilha", railTop: "Mais recomendados por especialistas", railDone: "Assistidos",
     mapLede: "18 tópicos ligados por pré-requisito. Aponte para um e veja o que ele pede e o que ele libera; o seu progresso preenche o mapa.",
     heroTitle: 'Aprenda IA na ordem que <em>faz sentido</em>.',
@@ -487,6 +489,8 @@ const ABOUT = {
       <li>Labels are written by a model and checked by two blind judges; expect a few percent of noise.</li>
       <li>No accounts, no analytics. Progress lives in your browser. Thumbnails and players load from YouTube.</li>
     </ul>
+    <h2>Open source</h2>
+    <p>Everything is on <a href="https://github.com/deivithi/prereq" target="_blank" rel="noopener">GitHub</a> under MIT: the scripts that build the pool, every label the model wrote, the two blind judges' answers and the eval script. Rerun it, audit a label, or fork it for another subject. Know a video that belongs here? <a href="${SUGGEST}" target="_blank" rel="noopener">Suggest it</a>.</p>
     <h2>Credits</h2>
     <p>Data from <a href="https://hackertube.org" target="_blank" rel="noopener">HackerTube</a> by Andrej Karpathy (ODC-By) and the <a href="https://huggingface.co/datasets/open-index/hacker-news" target="_blank" rel="noopener">open-index/hacker-news</a> archive. Built for the AI-education-feed challenge by @0xSero, end to end with Claude Code.</p>`,
   pt: (st, ev) => `
@@ -508,6 +512,8 @@ const ABOUT = {
       <li>Os rótulos são escritos por um modelo e conferidos por dois juízes cegos; espere alguns por cento de ruído.</li>
       <li>Sem conta, sem analytics. O progresso fica no seu navegador. Thumbnails e players carregam do YouTube.</li>
     </ul>
+    <h2>Código aberto</h2>
+    <p>Está tudo no <a href="https://github.com/deivithi/prereq" target="_blank" rel="noopener">GitHub</a>, sob MIT: os scripts que montam a base, cada rótulo que o modelo escreveu, as respostas dos dois juízes cegos e o script do eval. Rode de novo, audite um rótulo ou faça um fork para outro assunto. Conhece um vídeo que deveria estar aqui? <a href="${SUGGEST}" target="_blank" rel="noopener">Sugira</a>.</p>
     <h2>Créditos</h2>
     <p>Dados do <a href="https://hackertube.org" target="_blank" rel="noopener">HackerTube</a>, de Andrej Karpathy (ODC-By), e do arquivo <a href="https://huggingface.co/datasets/open-index/hacker-news" target="_blank" rel="noopener">open-index/hacker-news</a>. Feito para o desafio de feed de educação em IA do @0xSero, de ponta a ponta com o Claude Code.</p>`,
 };
@@ -594,6 +600,9 @@ function applyChrome() {
   document.getElementById("palette").setAttribute("aria-label", t("searchBtn"));
   document.querySelector(".skip").textContent = t("skip");
   document.querySelector(".foot p").innerHTML = t("foot"); // fixed strings of ours, no data inside
+  const code = document.getElementById("code-link");
+  code.setAttribute("aria-label", t("codeAria"));
+  code.querySelector("span").textContent = t("codeLabel");
   document.querySelectorAll("#lang button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
   document.getElementById("lang").setAttribute("aria-label", t("langLabel"));
 }

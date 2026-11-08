@@ -52,6 +52,8 @@ button { font: inherit; color: inherit; }
 .tools { display: flex; align-items: center; gap: 8px; flex: none; }
 .iconbtn { display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; }
 .iconbtn svg { width: 18px; height: 18px; fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; }
+.codebtn { text-decoration: none; font: 500 13px var(--mono); color: var(--muted); }
+.codebtn:hover { color: var(--ink); border-color: var(--muted); }
 .iconbtn kbd { font: 12px var(--mono); color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; }
 .lang { display: inline-flex; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; height: 40px; }
 .lang button { border: 0; background: transparent; padding: 0 10px; cursor: pointer; font: 500 13px var(--mono); color: var(--muted); min-width: 40px; }
@@ -61,7 +63,7 @@ button { font: inherit; color: inherit; }
   .brand span { display: none; }
   .tabs { order: 3; width: 100%; margin: 0; }
   .tools { margin-left: auto; }
-  .iconbtn kbd { display: none; }
+  .iconbtn kbd, .codebtn span { display: none; }
 }
 
 main { max-width: 1480px; margin: 0 auto; padding: 0 16px 56px; }
