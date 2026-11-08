@@ -44,4 +44,8 @@ holds the translated per-video lines; `data/trail.json` holds topic names in bot
 Video data: [HackerTube](https://hackertube.org) (ODC-By 1.0), derived from the
 [open-index/hacker-news](https://huggingface.co/datasets/open-index/hacker-news) archive. Hacker News
 comments remain the work of their authors; video titles and channels belong to their creators.
-Not affiliated with YouTube, Google, Hacker News or any course. Code: MIT.
+Not affiliated with YouTube, Google, Hacker News or any course.
+
+**Code:** MIT (see `LICENSE`). **Data** under `data/` and `site/data.json`: derived from HackerTube,
+ODC-By 1.0; keep that attribution when you reuse it. The raw HackerTube dump is not in this repo:
+download it from https://hackertube.org/data into `data/raw/` to rerun the pipeline.
