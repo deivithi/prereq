@@ -1,0 +1,15 @@
+{
+  "name": "Prereq — learn AI in the right order",
+  "short_name": "Prereq",
+  "description": "The AI videos experts keep recommending, ordered into a learning path.",
+  "start_url": "./#/trail",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f3ec",
+  "theme_color": "#f6f3ec",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

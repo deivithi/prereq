@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "stages": [
+    { "id": "s0", "name": "Orientation", "blurb": "What AI is, where it came from, why it matters." },
+    { "id": "s1", "name": "Math you actually need", "blurb": "Just enough linear algebra, calculus and probability." },
+    { "id": "s2", "name": "Learning from data", "blurb": "Classic ML, then neural networks from scratch." },
+    { "id": "s3", "name": "Deep learning", "blurb": "Making deep nets train, and the models that see and sequence." },
+    { "id": "s4", "name": "Transformers & LLMs", "blurb": "Attention, then how large language models really work." },
+    { "id": "s5", "name": "Frontier", "blurb": "Post-training, systems, building with LLMs, safety." },
+    { "id": "s6", "name": "Electives", "blurb": "Reinforcement learning, generative models, AI in the world." }
+  ],
+  "nodes": [
+    { "id": "big-picture", "stage": "s0", "name": "The big picture", "prereqs": [], "desc": "History of AI, what models can and cannot do, impact on work and society, expert overviews of the field." },
+    { "id": "math-linalg", "stage": "s1", "name": "Linear algebra", "prereqs": [], "desc": "Vectors, matrices, linear maps, eigenvectors, dot products as similarity." },
+    { "id": "math-calculus", "stage": "s1", "name": "Calculus & gradients", "prereqs": [], "desc": "Derivatives, chain rule, gradients, optimization intuition." },
+    { "id": "math-prob", "stage": "s1", "name": "Probability & information", "prereqs": [], "desc": "Probability, Bayes, statistics, entropy and information theory." },
+    { "id": "ml-basics", "stage": "s2", "name": "Machine learning foundations", "prereqs": ["math-linalg", "math-prob"], "desc": "Supervised learning, regression, classification, overfitting, classic ML algorithms, intro ML courses." },
+    { "id": "nn-basics", "stage": "s2", "name": "Neural networks & backprop", "prereqs": ["math-calculus", "ml-basics"], "desc": "Neurons, layers, loss, backpropagation, building a net from scratch." },
+    { "id": "training", "stage": "s3", "name": "Training deep nets", "prereqs": ["nn-basics"], "desc": "Optimizers, initialization, normalization, regularization, debugging training." },
+    { "id": "vision", "stage": "s3", "name": "CNNs & computer vision", "prereqs": ["training"], "desc": "Convolutions, image models, detection, vision transformers, speech and perception." },
+    { "id": "sequence", "stage": "s3", "name": "Language modeling & embeddings", "prereqs": ["nn-basics"], "desc": "Character/word models, embeddings, RNNs, LSTMs, classic NLP." },
+    { "id": "transformers", "stage": "s4", "name": "Attention & transformers", "prereqs": ["sequence", "math-linalg"], "desc": "Self-attention, the transformer architecture, building GPT from scratch." },
+    { "id": "llm-internals", "stage": "s4", "name": "How LLMs work", "prereqs": ["transformers"], "desc": "Pretraining, tokenization, scaling laws, what happens inside an LLM end to end." },
+    { "id": "post-training", "stage": "s5", "name": "Fine-tuning & RLHF", "prereqs": ["llm-internals", "rl"], "desc": "Supervised fine-tuning, RLHF, preference optimization, reasoning models trained with RL." },
+    { "id": "systems", "stage": "s5", "name": "GPUs & efficient AI", "prereqs": ["llm-internals"], "desc": "GPU programming, distributed training, inference efficiency, quantization, hardware." },
+    { "id": "llm-apps", "stage": "s5", "name": "Building with LLMs", "prereqs": ["llm-internals"], "desc": "Prompting, RAG, tool use, agents, evals, shipping LLM products." },
+    { "id": "safety", "stage": "s5", "name": "Safety & interpretability", "prereqs": ["llm-internals"], "desc": "Alignment, interpretability, robustness, risks and governance of AI." },
+    { "id": "rl", "stage": "s6", "name": "Reinforcement learning", "prereqs": ["nn-basics"], "desc": "MDPs, policy gradients, Q-learning, AlphaGo-style systems, deep RL courses." },
+    { "id": "generative", "stage": "s6", "name": "Generative models", "prereqs": ["training"], "desc": "VAEs, GANs, diffusion, image/audio/video generation." },
+    { "id": "applied", "stage": "s6", "name": "AI in the world", "prereqs": ["nn-basics"], "desc": "AI for science, games, robotics, self-driving, ML in production — explained, not just demoed." }
+  ]
+}

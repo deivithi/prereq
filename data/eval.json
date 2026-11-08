@@ -1,0 +1,99 @@
+{
+ "method": "Blind re-labeling of 60 random candidates (fixed seed) by two independent LLM judges that never saw the published labels.",
+ "rows": [
+  {
+   "metric": "Keep/drop agreement: published vs judge A",
+   "value": "92% (55/60)",
+   "note": "Does the video actually teach AI?"
+  },
+  {
+   "metric": "Keep/drop agreement: published vs judge B",
+   "value": "88% (53/60)",
+   "note": "Same question, second independent judge."
+  },
+  {
+   "metric": "Judge A vs judge B",
+   "value": "97% (58/60)",
+   "note": "Ceiling: how much two careful raters agree with each other."
+  },
+  {
+   "metric": "Topic agreement: published vs judge A",
+   "value": "96% (27/28)",
+   "note": "Same one of 18 trail topics, among videos both kept."
+  },
+  {
+   "metric": "Topic agreement: published vs judge B",
+   "value": "96% (25/26)",
+   "note": "Neighbouring topics (e.g. training vs nn-basics) count as misses."
+  },
+  {
+   "metric": "Published label outvoted by both judges",
+   "value": "5/60",
+   "note": "Each was reviewed; fixes go into overrides.json."
+  }
+ ],
+ "raw": {
+  "sample": 60,
+  "teaches": {
+   "cls_j1": {
+    "n": 55,
+    "of": 60,
+    "pct": 92
+   },
+   "cls_j2": {
+    "n": 53,
+    "of": 60,
+    "pct": 88
+   },
+   "j1_j2": {
+    "n": 58,
+    "of": 60,
+    "pct": 97
+   }
+  },
+  "node": {
+   "cls_j1": {
+    "n": 27,
+    "of": 28,
+    "pct": 96
+   },
+   "cls_j2": {
+    "n": 25,
+    "of": 26,
+    "pct": 96
+   },
+   "j1_j2": {
+    "n": 24,
+    "of": 26,
+    "pct": 92
+   }
+  },
+  "outvoted": [
+   {
+    "vid": "ajGX7odA87k",
+    "cls": true,
+    "judges": false
+   },
+   {
+    "vid": "7kQk9-KLPfU",
+    "cls": true,
+    "judges": false
+   },
+   {
+    "vid": "yUICAkSQTZY",
+    "cls": true,
+    "judges": false
+   },
+   {
+    "vid": "42QuXLucH3Q",
+    "cls": true,
+    "judges": false
+   },
+   {
+    "vid": "tP-Ipsat90c",
+    "cls": true,
+    "judges": false
+   }
+  ]
+ }
+}

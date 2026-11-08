@@ -1,0 +1,198 @@
+[
+ {
+  "id": "karpathy/nn-zero-to-hero",
+  "kind": "course",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/karpathy/nn-zero-to-hero/master/README.md",
+  "videos": 8
+ },
+ {
+  "id": "stanford-cs336",
+  "kind": "course",
+  "ok": true,
+  "url": "https://stanford-cs336.github.io/spring2025/",
+  "videos": 0
+ },
+ {
+  "id": "stanford-cs224n",
+  "kind": "course",
+  "ok": true,
+  "url": "https://web.stanford.edu/class/cs224n/",
+  "videos": 0
+ },
+ {
+  "id": "stanford-cs231n",
+  "kind": "course",
+  "ok": true,
+  "url": "https://cs231n.stanford.edu/schedule.html",
+  "videos": 4
+ },
+ {
+  "id": "stanford-cs25",
+  "kind": "course",
+  "ok": true,
+  "url": "https://web.stanford.edu/class/cs25/",
+  "videos": 0
+ },
+ {
+  "id": "mit-6s191",
+  "kind": "course",
+  "ok": true,
+  "url": "https://introtodeeplearning.com/",
+  "videos": 13
+ },
+ {
+  "id": "fast.ai",
+  "kind": "course",
+  "ok": true,
+  "url": "https://course.fast.ai/",
+  "videos": 2
+ },
+ {
+  "id": "gpu-mode/lectures",
+  "kind": "course",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/gpu-mode/lectures/main/README.md",
+  "videos": 0
+ },
+ {
+  "id": "mlabonne/llm-course",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/mlabonne/llm-course/main/README.md",
+  "videos": 9
+ },
+ {
+  "id": "dair-ai/ML-YouTube-Courses",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/dair-ai/ML-YouTube-Courses/main/README.md",
+  "videos": 4
+ },
+ {
+  "id": "Hannibal046/Awesome-LLM",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/Hannibal046/Awesome-LLM/main/README.md",
+  "videos": 4
+ },
+ {
+  "id": "rasbt/LLMs-from-scratch",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/rasbt/LLMs-from-scratch/main/README.md",
+  "videos": 0
+ },
+ {
+  "id": "jacobhilton/deep_learning_curriculum",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/jacobhilton/deep_learning_curriculum/master/README.md",
+  "videos": 0
+ },
+ {
+  "id": "Developer-Y/cs-video-courses",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/Developer-Y/cs-video-courses/master/README.md",
+  "videos": 20
+ },
+ {
+  "id": "aishwaryanr/awesome-generative-ai-guide",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/aishwaryanr/awesome-generative-ai-guide/main/README.md",
+  "videos": 0
+ },
+ {
+  "id": "microsoft/AI-For-Beginners",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/microsoft/AI-For-Beginners/main/README.md",
+  "videos": 0
+ },
+ {
+  "id": "microsoft/generative-ai-for-beginners",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/microsoft/generative-ai-for-beginners/main/README.md",
+  "videos": 0
+ },
+ {
+  "id": "GokuMohandas/Made-With-ML",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/GokuMohandas/Made-With-ML/main/README.md",
+  "videos": 1
+ },
+ {
+  "id": "stas00/ml-engineering",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/stas00/ml-engineering/master/README.md",
+  "videos": 1
+ },
+ {
+  "id": "keon/awesome-nlp",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/keon/awesome-nlp/main/README.md",
+  "videos": 0
+ },
+ {
+  "id": "aikorea/awesome-rl",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/aikorea/awesome-rl/master/README.md",
+  "videos": 26
+ },
+ {
+  "id": "ChristosChristofidis/awesome-deep-learning",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/ChristosChristofidis/awesome-deep-learning/master/README.md",
+  "videos": 23
+ },
+ {
+  "id": "ujjwalkarn/Machine-Learning-Tutorials",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/ujjwalkarn/Machine-Learning-Tutorials/master/README.md",
+  "videos": 5
+ },
+ {
+  "id": "louisfb01/start-machine-learning",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/louisfb01/start-machine-learning/master/README.md",
+  "videos": 7
+ },
+ {
+  "id": "eugeneyan/applied-ml",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/eugeneyan/applied-ml/main/README.md",
+  "videos": 19
+ },
+ {
+  "id": "Mooler0410/LLMsPracticalGuide",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://raw.githubusercontent.com/Mooler0410/LLMsPracticalGuide/main/README.md",
+  "videos": 0
+ },
+ {
+  "id": "openai/spinningup",
+  "kind": "guide",
+  "ok": true,
+  "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html",
+  "videos": 1
+ },
+ {
+  "id": "d2l-ai",
+  "kind": "course",
+  "ok": true,
+  "url": "https://d2l.ai/",
+  "videos": 0
+ }
+]
