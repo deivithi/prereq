@@ -4,41 +4,65 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Prereq — learn AI in the right order</title>
-<meta name="description" content="The AI videos that experts keep recommending, ordered into a learning path. Curated from 20 years of Hacker News and real course syllabi.">
-<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#14130f" media="(prefers-color-scheme: dark)">
-<meta property="og:title" content="Prereq — learn AI in the right order">
-<meta property="og:description" content="The AI videos experts keep recommending, ordered into a learning path with prerequisites.">
+<meta name="description" content="The AI videos that experts keep recommending, ordered into a map of prerequisites. Curated from 20 years of Hacker News and real course syllabi.">
+<meta name="theme-color" content="#0b0b0d">
+<meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://prereq.deivithi74.workers.dev/">
+<meta property="og:title" content="Prereq — learn AI in the right order">
+<meta property="og:description" content="The AI videos experts keep recommending, ordered into a map of prerequisites.">
 <meta property="og:image" content="https://prereq.deivithi74.workers.dev/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Prereq — learn AI in the right order">
-<meta name="twitter:description" content="The AI videos experts keep recommending, ordered into a learning path with prerequisites.">
+<meta name="twitter:description" content="The AI videos experts keep recommending, ordered into a map of prerequisites.">
 <meta name="twitter:image" content="https://prereq.deivithi74.workers.dev/og.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
-  <a class="brand" href="#/trail" aria-label="Prereq home"><span class="mark" aria-hidden="true">P</span><span>Prereq</span></a>
+  <a class="brand" href="#/trail" aria-label="Prereq">
+    <svg class="crest" viewBox="0 0 64 64" aria-hidden="true">
+      <path class="crest__shield" d="M32 3 L57 11 V30 C57 46.5 46 56.5 32 61 C18 56.5 7 46.5 7 30 V11 Z"/>
+      <path class="crest__rim" d="M32 7.5 L53 14.2 V30 C53 43.8 44 52.3 32 56.3 C20 52.3 11 43.8 11 30 V14.2 Z"/>
+      <g class="crest__edges"><path d="M21 45 L32 33"/><path d="M43 45 L32 33"/><path d="M32 33 L32 19"/></g>
+      <circle class="crest__n" cx="21" cy="45" r="4.2"/><circle class="crest__n" cx="43" cy="45" r="4.2"/><circle class="crest__n" cx="32" cy="33" r="4.6"/>
+      <circle class="crest__top" cx="32" cy="18" r="6"/><circle class="crest__halo" cx="32" cy="18" r="9"/>
+    </svg>
+    <span>Prereq</span>
+  </a>
   <nav class="tabs" aria-label="Sections">
-    <a href="#/trail" data-tab="trail">Trail</a>
-    <a href="#/feed" data-tab="feed">Feed</a>
+    <a href="#/trail" data-tab="trail">Home</a>
+    <a href="#/map" data-tab="map">Map</a>
+    <a href="#/feed" data-tab="feed">Browse</a>
     <a href="#/about" data-tab="about">Method</a>
   </nav>
+  <div class="tools">
+    <button type="button" class="iconbtn" id="open-search" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><kbd>/</kbd></button>
+    <div class="lang" id="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="pt" aria-pressed="false">PT</button>
+    </div>
+  </div>
 </header>
-<main id="main" tabindex="-1"><p class="loading">Loading the trail…</p></main>
+<main id="main" tabindex="-1"><p class="loading">Loading…</p></main>
+<dialog class="palette" id="palette" aria-label="Search">
+  <div class="pal-box">
+    <input id="pal-q" type="search" role="combobox" aria-expanded="true" aria-controls="pal-list" aria-autocomplete="list" autocomplete="off" placeholder="Search videos and topics…">
+    <ul id="pal-list" role="listbox"></ul>
+    <p class="pal-hint" id="pal-hint"></p>
+  </div>
+</dialog>
 <footer class="foot">
-  <p>Data: <a href="https://hackertube.org" rel="noopener">HackerTube</a> (ODC-By) from the <a href="https://huggingface.co/datasets/open-index/hacker-news" rel="noopener">open-index/hacker-news</a> archive, plus public course syllabi. Not affiliated with YouTube, HN or any course. Your progress stays in this browser.</p>
+  <p>Data: <a href="https://hackertube.org" target="_blank" rel="noopener">HackerTube</a> (ODC-By) from the <a href="https://huggingface.co/datasets/open-index/hacker-news" target="_blank" rel="noopener">open-index/hacker-news</a> archive, plus public course syllabi. Not affiliated with YouTube, HN or any course.</p>
 </footer>
 <script src="app.js" defer></script>
 </body>

@@ -34,6 +34,10 @@ python -m http.server 4320 --directory site
 ```
 
 The site is static (`site/`): no backend, no accounts, progress in `localStorage`, installable PWA.
+Home is a streaming-style shelf view; `#/map` is the interactive prerequisite map (point at a topic to
+light up what it needs and unlocks); `/` or Ctrl+K opens search; on a video page `m` marks it watched and
+`n` jumps to the next one. English by default, Portuguese via the EN/PT toggle (`data/i18n/pt-*.jsonl`
+holds the translated per-video lines; `data/trail.json` holds topic names in both languages).
 
 ## Credits and license
 

@@ -19,7 +19,15 @@ const classDir = path.join(root, "data/class");
 for (const f of fs.readdirSync(classDir).filter((f) => /^batch-\d+\.jsonl$/.test(f))) {
   for (const l of lines(`data/class/${f}`)) labels.set(l.vid, l);
 }
-const overrides = fs.existsSync(path.join(root, "data/overrides.json")) ? JSON.parse(fs.readFileSync(path.join(root, "data/overrides.json"), "utf8")) : {};
+// PT-BR translations of the per-video lines (data/i18n/pt-N.jsonl). English stays the default.
+const i18nDir = path.join(root, "data/i18n");
+const pt = new Map();
+if (fs.existsSync(i18nDir)) {
+  for (const f of fs.readdirSync(i18nDir).filter((f) => /^pt-\d+\.jsonl$/.test(f))) {
+    for (const l of lines(`data/i18n/${f}`)) pt.set(l.vid, l);
+  }
+}
+const overrides =fs.existsSync(path.join(root, "data/overrides.json")) ? JSON.parse(fs.readFileSync(path.join(root, "data/overrides.json"), "utf8")) : {};
 
 const problems = [];
 const videos = [];
@@ -38,6 +46,11 @@ for (const [vid, c] of cand) {
     y: c.first_year || null, w: h?.why_hn || "",
     q: h?.quote?.text ? { text: h.quote.text, id: h.quote.hn_comment_id, year: h.quote.year } : null,
   });
+  const tr = pt.get(vid);
+  if (pt.size) {
+    if (!tr?.o) problems.push(`missing pt translation ${vid}`);
+    else Object.assign(videos[videos.length - 1], { op: tr.o, wp: tr.w || "" });
+  }
 }
 videos.sort((a, b) => b.s - a.s);
 for (const n of trail.nodes) for (const p of n.prereqs) if (!nodeIds.has(p)) problems.push(`unknown prereq ${p} in ${n.id}`);
